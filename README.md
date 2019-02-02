@@ -11,7 +11,7 @@ Chess With Unity is a multiplayer chess game that utilizes the unity engine for 
 # Team Agreement
 This section is intended to document the process that we've all agreed to.
 
-## Ticketing Work In Trello
+## Ticketing Work In Jira
 * All work is ticketed. If your current work doesn't fall into the scope of a ticket, ask Jack if a new ticket should
 be created.
 
