@@ -1,12 +1,12 @@
 # ChessWithUnity
-Chess With Unity is a multiplayer chess game that utilizes the unity engine for graphics.
+ChessWithUnity is a multiplayer chess game that utilizes the Unity engine for graphics.
 
 ## Contributers
 @jacksonkolb94
 
-@maxdmorrison6
+@MaxMorrison6
 
-@fa-ez amin
+@BiggusDickus420
 
 # Team Agreement
 This section is intended to document the process that we've all agreed to.
@@ -20,7 +20,7 @@ discuss until everyone agrees.
 
 * As a general rule, we should avoid resizing tickets and adding more work to them after their initial creation.
 
-* Branch names must be in this format: `CWU-1`, `CWU-10`, `CWU-100` (CWU = Chess With Unity)
+* Branch names must be in this format: `SB-1`, `SB-10`, `SB-100` (SB = Sons of Bishops)
 
 * Branch names must match the specific ticket number in our trello board.
 
