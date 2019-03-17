@@ -4,34 +4,35 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
-    private const float TILE_SIZE = 1.9f;       //parameters of the tile size
-    private const float TILE_OFFSET = 0.5f;
+    public const float TILE_SIZE = 1.9f;       //parameters of the tile size
+    public const float TILE_OFFSET = 0.5f;
 
-    private int selectionX = -1;                //Keeps track of current place on board
-    private int selectionY = -1;
+    public int selectionX = -1;                //Keeps track of current place on board
+    public int selectionY = -1;
 
     public List<GameObject> chesspiecePrefabs;
-    private List<GameObject> activeChesspiece;
+    public List<GameObject> activeChesspiece;
 
-    private Quaternion orientation = Quaternion.Euler(0, 180, 0);
+    public Quaternion orientation = Quaternion.Euler(0, 180, 0);
+    public BoardManager @object;
 
-    private void Start()
+    public void Start()
     {
         SpawnAllChessPieces();
     }
 
-    private void Update()
+    public void Update()
     {
         UpdateSelection();
         DrawChessboard();
     }
 
-    private void UpdateSelection()
+    public void UpdateSelection()
     {
         if (!Camera.main)                       //to test this function
             return;
 
-        RaycastHit hit;
+       RaycastHit hit;
        if(Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hit, 25.0f, LayerMask.GetMask("ChessPlane")))
         {
             selectionX = (int)hit.point.x;
@@ -44,14 +45,14 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    private void SpawnChessPiece(int index, Vector3 position)
+    public void SpawnChessPiece(int index, Vector3 position)
     {
         GameObject go = Instantiate(chesspiecePrefabs[index], position, orientation) as GameObject;
         go.transform.SetParent(transform);
         activeChesspiece.Add(go);
     }
 
-    private void SpawnAllChessPieces()
+    public void SpawnAllChessPieces()
     {
         activeChesspiece = new List<GameObject>();
 
@@ -106,7 +107,7 @@ public class BoardManager : MonoBehaviour
             SpawnChessPiece(11, GetTileCenter(i, 6));
     }
 
-    private Vector3 GetTileCenter(int x, int y)
+    public Vector3 GetTileCenter(int x, int y)
     {
         Vector3 origin = Vector3.zero;
         origin.x += (TILE_SIZE * x) + TILE_OFFSET;
@@ -114,7 +115,7 @@ public class BoardManager : MonoBehaviour
         return origin;
     }
 
-    private void DrawChessboard()
+    public void DrawChessboard()
     {
         Vector3 widthLine = Vector3.right * 8;
         Vector3 heightLine = Vector3.forward * 8;
