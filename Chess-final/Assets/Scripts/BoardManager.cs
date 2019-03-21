@@ -13,7 +13,11 @@ public class BoardManager : MonoBehaviour
     public List<GameObject> chesspiecePrefabs;
     private List<GameObject> activeChesspiece;
 
+<<<<<<< HEAD
     private Quaternion orientation = Quaternion.Euler(0, 360, 0);
+=======
+    private Quaternion orientation = Quaternion.Euler(0, 180, 0);
+>>>>>>> a3b23a3903fbc76035a43e5816eae5bf885def5e
 
     private void Start()
     {
@@ -81,6 +85,11 @@ public class BoardManager : MonoBehaviour
 
         //Spawn Black Pieces
 
+<<<<<<< HEAD
+=======
+        //Spawn White Pieces
+
+>>>>>>> a3b23a3903fbc76035a43e5816eae5bf885def5e
         //King
         SpawnChessPiece(6, GetTileCenter(3, 7));
 
